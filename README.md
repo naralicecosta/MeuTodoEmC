@@ -70,6 +70,15 @@ Comando para executar o projeto
 dotnet watch run
 ```
 ... 
+## Testar API no postman :arrow_forward:
+<ul>
+Configure as requisições HTTP para os seguintes endpoints da API:
+<li>GET /api/todo: Retorna todas as tarefas.</li>
+<li>GET /api/todo/{id}: Retorna uma tarefa específica pelo ID.</li>
+<li>POST /api/todo: Cria uma nova tarefa.</li>
+<li>PUT /api/todo/{id}: Atualiza uma tarefa existente pelo ID.</li>
+<li>DELETE /api/todo/{id}: Remove uma tarefa existente pelo ID.</li>
+</ul>
 
 ## Desenvolvedores/Contribuintes :octocat:
 
