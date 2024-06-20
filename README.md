@@ -84,6 +84,6 @@ Configure as requisições HTTP para os seguintes endpoints da API:
 
 Time responsável pelo desenvolvimento do projeto
 
-|[<br><sub>Naralice Costa</sub>](https://github.com/naralicecosta) |  [<br><sub>Alison Galdino</sub>](https://github.com/Alisongaldino) |[<br><sub>Guilherme</sub>](https://github.com/Diana-ops) |[<br><sub>Italo Barbosa</sub>](https://github.com/Diana-ops) |
+|[<br><sub>Naralice Costa</sub>](https://github.com/naralicecosta) |  [<br><sub>Alison Galdino</sub>](https://github.com/Alisongaldino) |[<br><sub>Guilherme</sub>](https://github.com/GuilhermeHKS) |[<br><sub>Italo Barbosa</sub>](https://github.com/Italo-Moura14) |
 
 Copyright :copyright: Ano - Titulo do Projeto
