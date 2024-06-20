@@ -13,9 +13,9 @@ namespace MeuTodo
 {
     public class Startup
     {
-        public void ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services) //Método onde são configurados os serviços utilizados pela aplicação.
         {
-            services.AddControllers();
+            services.AddControllers(); //Adiciona serviços necessários para suportar controllers na aplicação.
             services.AddDbContext<AppDbContext>(); 
         }
 
@@ -26,7 +26,7 @@ namespace MeuTodo
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseRouting();
+            app.UseRouting();// Habilita o roteamento de requisições HTTP para os controllers e endpoints definidos na aplicação.
 
             app.UseEndpoints(endpoints =>
             {

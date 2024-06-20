@@ -35,7 +35,7 @@ namespace MeuTodo.Controllers
             var todo = await context
                 .Todos
                 .AsNoTracking()
-                .FirstOrDefaultAsync(x=> x.Id == id);
+                .FirstOrDefaultAsync(x=> x.Id == id); //função que seleciona apenas um item
             return todo == null //Se todo for nulo retornar not found e se não retorna um ok
             ? NotFound() 
             :  Ok(todo);

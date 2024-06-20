@@ -11,9 +11,9 @@ namespace MeuTodo
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static void Main(string[] args) //ponto de entrada da aplicação
         {
-            CreateHostBuilder(args).Build().Run();
+            CreateHostBuilder(args).Build().Run(); //Cria e executa o host da aplicação.
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
