@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using MeuTodo.Models; // Adicione essa linha
+using MeuTodo.Models;
 
 
 namespace MeuTodo.Data

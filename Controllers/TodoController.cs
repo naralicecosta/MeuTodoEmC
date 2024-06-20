@@ -46,7 +46,7 @@ namespace MeuTodo.Controllers
             [FromServices] AppDbContext context,
             [FromBody] CreateTodoViewModel model)
         {
-            if(!ModelState.IsValid) //se o 
+            if(!ModelState.IsValid) //model state vai aplicar as validações no CreateTodo
                 return BadRequest();
 
             var todo = new Todo
@@ -59,9 +59,9 @@ namespace MeuTodo.Controllers
 
             try
             {
-                await context.Todos.AddAsync(todo);
-                await context.SaveChangesAsync();
-                return Created($"v1/todos/{todo.Id}", todo);
+                await context.Todos.AddAsync(todo); //salvar Todo na memória
+                await context.SaveChangesAsync(); //salvar Todo no banco sqlite
+                return Created($"v1/todos/{todo.Id}", todo); //Todo criado
             }
             catch (Exception e)
             {
@@ -69,6 +69,7 @@ namespace MeuTodo.Controllers
             }
 
         }
+
         [HttpPut("todos/{id}")]
         public async Task<IActionResult> PutAsync(
             [FromServices] AppDbContext context,
@@ -87,8 +88,8 @@ namespace MeuTodo.Controllers
             {
                 todo.Title = model.Title;
 
-                context.Todos.Update(todo);
-                await context.SaveChangesAsync();
+                context.Todos.Update(todo); //atualizar
+                await context.SaveChangesAsync(); //atualizar no banco
 
                 return Ok(todo);
             }
@@ -108,8 +109,8 @@ namespace MeuTodo.Controllers
 
             try
             {
-                context.Todos.Remove(todo);
-                await context.SaveChangesAsync();
+                context.Todos.Remove(todo); //removendo Todo
+                await context.SaveChangesAsync(); //salvando alteração no banco
                 return Ok();
             }
             catch (Exception e)
